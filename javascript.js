@@ -9,12 +9,11 @@ function addBook(){
 }
 
 function displayBooks(){
-    const libraryContainer = document.getElementsByClassName("library-container")
-    let books = libraryContainer.children
+    const libraryContainer = document.getElementById("library-container")
 
-    books.forEach(book => libraryContainer.removeChild(book));
+    libraryContainer.textContent = ''
 
-    myLibrary.forEach(book => {
+    for (let book of myLibrary){
         let newBookContainer = document.createElement('div')
         newBookContainer.classList.add('book-container')
 
@@ -23,5 +22,5 @@ function displayBooks(){
 
         newBookContainer.appendChild(newContent)
         libraryContainer.appendChild(newBookContainer)
-    })
+    }
 }
