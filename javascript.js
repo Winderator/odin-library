@@ -24,3 +24,14 @@ function displayBooks(){
         libraryContainer.appendChild(newBookContainer)
     }
 }
+
+document.getElementById('new-book').addEventListener( 'click', () => {
+    let newBookDialog = document.getElementById('new-book-dialog')
+    newBookDialog.showModal()
+})
+document.getElementById('close-form').addEventListener('click', () => {
+    let newBookDialog = document.getElementById('new-book-dialog')
+    let newBookForm = document.getElementById('new-book-form')
+    newBookForm.reset()
+    newBookDialog.close()
+})
