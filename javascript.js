@@ -35,3 +35,8 @@ document.getElementById('close-form').addEventListener('click', () => {
     newBookForm.reset()
     newBookDialog.close()
 })
+
+document.getElementById('submit-form').addEventListener('click', (e) => {
+    console.log(e)
+    e.preventDefault()
+})
